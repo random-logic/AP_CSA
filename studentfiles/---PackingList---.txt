@@ -1,0 +1,392 @@
+C:.
+|   SolutionsToExercises.pdf
+|   
+.---Ch02
+|   .---Exercises
+|   |   |   RedCross.java
+|   |   |   
+|   |   .---Solutions
+|   |           HelloApplet2.java
+|   |           PrintFace.java
+|   |           TestApplet2.html
+|   |           
+|   .---Hello
+|   |       Greetings.java
+|   |       Greetings2.java
+|   |       HelloWorld.java
+|   |       
+|   .---HelloGui
+|           Banner.java
+|           HelloApplet.java
+|           HelloGraphics.java
+|           HelloGui.java
+|           TestApplet.html
+|           TestBanner.html
+|           
+.---Ch03
+|   .---Exercises
+|   |       Circle.java
+|   |       CircleTest.java
+|   |       CoinTest.java
+|   |       
+|   .---GridWorld
+|           UTurnBug.java
+|           
+.---Ch04
+|   .---Exercises
+|           Ornament.java
+|           
+.---Ch05
+|   .---Exercises
+|   |       EasySound.java
+|   |       Morning.java
+|   |       roost.wav
+|   |       
+|   .---Syntax
+|           MovingDisk.java
+|           
+.---Ch06
+|   .---Exercises
+|   |   |   Bmi.java
+|   |   |   Rainbow.java
+|   |   |   
+|   |   .---Solutions
+|   |           DogsHumanAge.java
+|   |           
+|   .---Poll
+|           Poll.java
+|           PollControlPanel.java
+|           PollDisplayPanel.java
+|           
+.---Ch07
+|   .---Craps
+|   |       Craps.jar
+|   |       Craps.java
+|   |       CrapsGame.java
+|   |       CrapsStats.java
+|   |       CrapsTest1.java
+|   |       RollingDie.java
+|   |       source.zip
+|   |       
+|   .---Exercises
+|       |   Dates.java
+|       |   Rps.java
+|       |   Wages.java
+|       |   WarmWeather.java
+|       |   
+|       .---Solutions
+|               Dates.java
+|               
+.---Ch08
+|   .---Exercises
+|   |       GradeAvg.java
+|   |       scores.dat
+|   |       
+|   .---MyMath
+|           MyMath.java
+|           
+.---Ch09
+|   .---Exercises
+|   |       Temperature.java
+|   |       TestTime.java
+|   |       
+|   .---Fraction
+|   |       Fraction.java
+|   |       TestFractions.java
+|   |       
+|   .---SnackBar
+|           coin.gif
+|           SnackBar.jar
+|           SnackBar.java
+|           VendingMachine.java
+|           Vendor.java
+|           
+.---Ch10
+|   .---Exercises
+|   |       Cooney.jar
+|   |       Hangman.java
+|   |       StringTest.java
+|   |       
+|   .---Lipogrammer
+|           lipogram.txt
+|           Lipogrammer.java
+|           LipogrammerMenu.java
+|           
+.---Ch11
+|   .---Exercises
+|   |   |   Triangle.java
+|   |   |   
+|   |   .---Solutions
+|   |           SlowBug.java
+|   |           
+|   .---GridWorldDance
+|           beat1.wav
+|           beat2.wav
+|           CongaNumber.java
+|           DanceNumber.java
+|           DanceRunner.java
+|           DancingBug.gif
+|           DancingCrab.gif
+|           GridWorldDance.jar
+|           LeftSandal.gif
+|           LeftShoe.gif
+|           Maracas.gif
+|           RightSandal.gif
+|           RightShoe.gif
+|           source.zip
+|           WaltzNumber.java
+|           YMCANumber.java
+|           
+.---Ch12
+|   .---Chomp
+|   |       CharMatrix.java
+|   |       Chomp.jar
+|   |       Chomp.java
+|   |       chomp.wav
+|   |       source.zip
+|   |       
+|   .---Exercises
+|   .---Fortunes
+|           ding.wav
+|           FortuneTeller.java
+|           TestFortune.html
+|           
+.---Ch13
+|   .---Exercises
+|   .---GridWorldCritters
+|   .---IndexMaker
+|           fish.txt
+|           IndexMaker.java
+|           
+.---Ch14
+|   .---Benchmarks
+|   |       Benchmarks.java
+|   |       InsertionSort.java
+|   |       Mergesort.java
+|   |       Quicksort.java
+|   |       SelectionSort.java
+|   |       
+|   .---BinarySearch
+|   |       BinarySearch.java
+|   |       
+|   .---Compare
+|   |       ComparatorTest.java
+|   |       Country.java
+|   |       PopulationComparator.java
+|   |       
+|   .---Exercises
+|   .---KeepInOrder
+|           SortedListTest.java
+|           
+.---Ch15
+|   .---Dictionary
+|   |   |   words.txt
+|   |   |   
+|   |   .---Solution
+|   |           ChooseWords.java
+|   |           
+|   .---Exercises
+|       |   madlibs.txt
+|       |   
+|       .---Solutions
+|               Braces.java
+|               CharImage.java
+|               FileCompare.java
+|               image.txt
+|               
+.---Ch16
+|   .---Exercises
+|   |   |   Boxes.java
+|   |   |   Drawings.java
+|   |   |   
+|   |   .---Solutions
+|   |           Drawings1.java
+|   |           
+|   .---Puzzle
+|           bells.wav
+|           bzz.wav
+|           drop.wav
+|           EasySound.java
+|           Puzzle.jar
+|           Puzzle.java
+|           PuzzleCell.java
+|           
+.---Ch17
+|   .---Exercises
+|   |   |   Keypad.jar
+|   |   |   madlibs.txt
+|   |   |   
+|   |   .---Solutions
+|   |           PizzaGui.java
+|   |           
+|   .---Ramblecs
+|           chomp.wav
+|           ControlPanel.java
+|           drop.wav
+|           Ramblecs.jar
+|           Ramblecs.java
+|           RamblecsMenu.java
+|           source.zip
+|           
+.---Ch18
+|   .---Draw
+|   |       BalloonDraw.jar
+|   |       
+|   .---Exercises
+|   |   |   TestSlides.html
+|   |   |   
+|   |   .---Solutions
+|   |           DrawingPanel.java
+|   |           FourSeasons.java
+|   |           ImagePanel.java
+|   |           
+|   .---Ramblecs
+.---Ch20
+|   .---Exercises
+|   |       board.txt
+|   |       bookindex.txt
+|   |       cookies.txt
+|   |       movies.txt
+|   |       
+|   .---SafeTrade
+|           SafeTrade.jar
+|           SafeTrade.java
+|           SafeTradeDocs.zip
+|           source.zip
+|           
+.---Ch21
+|   .---Lists
+|   |       ListNode.java
+|   |       ListNode2.java
+|   |       SinglyLinkedList.java
+|   |       SinglyLinkedListIterator.java
+|   |       
+|   .---Teletext
+|           Teletext.jar
+|           Teletext.java
+|           TeletextDisplay.java
+|           TeletextInput.java
+|           TeletextList.java
+|           
+.---Ch22
+|   .---Actors
+|   |       Actor.java
+|   |       Kitten.java
+|   |       Message.java
+|   |       ThreeKittens.java
+|   |       
+|   .---Browser
+|   |       BrowserControlPanel.java
+|   |       BrowserMouseListener.java
+|   |       BrowserView.java
+|   |       LineCruiser.java
+|   |       lines.html
+|   |       
+|   .---Exercises
+|           Kitten.gif
+|           Queue.java
+|           
+.---Ch23
+|   .---Exercises
+|   .---Hex
+|   |       Hex.java
+|   |       hex.txt
+|   |       HexBoard.java
+|   |       
+|   .---TowersOfHanoi
+.---Ch24
+|   |   TreeNode.java
+|   |   
+|   .---BST
+|   |       MyTreeSet.java
+|   |       
+|   .---Exercises
+|   .---Messenger
+|   |       Messenger.jar
+|   |       Messenger.java
+|   |       MessengerDocs.zip
+|   |       source.zip
+|   |       
+|   .---MorseCode
+|           MorseCode.java
+|           Telegraph.java
+|           
+.---Ch25
+|   .---Cryptogram
+|   |       Cryptogram.java
+|   |       CryptogramMenu.java
+|   |       hint.txt
+|   |       sample.txt
+|   |       secret.txt
+|   |       
+|   .---Exercises
+|   .---Giggle
+|           Giggle.java
+|           
+.---Ch26
+|   .---Exercises
+|   |       Giggle.java
+|   |       
+|   .---Heap
+|   |       HeapPriorityQueue.java
+|   |       
+|   .---Heapsort
+.---Ch27
+|   .---Exercises
+|   |   .---Solutions
+|   |           EasyDate.java
+|   |           
+|   .---Goofenspiel
+|   |   |   deck.zip
+|   |   |   Goofenspiel.jar
+|   |   |   
+|   |   .---cards
+|   |   |       10-hearts.gif
+|   |   |       10-spades.gif
+|   |   |       2-hearts.gif
+|   |   |       2-spades.gif
+|   |   |       3-hearts.gif
+|   |   |       3-spades.gif
+|   |   |       4-hearts.gif
+|   |   |       4-spades.gif
+|   |   |       5-hearts.gif
+|   |   |       5-spades.gif
+|   |   |       6-hearts.gif
+|   |   |       6-spades.gif
+|   |   |       7-hearts.gif
+|   |   |       7-spades.gif
+|   |   |       8-hearts.gif
+|   |   |       8-spades.gif
+|   |   |       9-hearts.gif
+|   |   |       9-spades.gif
+|   |   |       Ace-hearts.gif
+|   |   |       Ace-spades.gif
+|   |   |       Jack-hearts.gif
+|   |   |       Jack-spades.gif
+|   |   |       King-hearts.gif
+|   |   |       King-spades.gif
+|   |   |       Queen-hearts.gif
+|   |   |       Queen-spades.gif
+|   |   |       
+|   |   .---Solution
+|   |           Goofenspiel.java
+|   |           GoofenspielMinMaxStrategy.java
+|   |           GoofenspielModel.java
+|   |           GoofenspielRandomStrategy.java
+|   |           GoofenspielStrategy.java
+|   |           GoofenspielView.java
+|   |           PlayingCard.java
+|   |           
+|   .---MVC
+|           source.zip
+|           
+.---EasyClasses
+        bells.wav
+        EasyClasses.jar
+        EasyClassesDocs.zip
+        EasyDate.java
+        EasyDemo.java
+        EasyReader.java
+        EasySound.java
+        EasyWriter.java
+        
