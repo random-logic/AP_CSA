@@ -1,5 +1,5 @@
 /**
- * Write a description of class WS03E here.
+ * Deals a random card from a deck of 52 cards to the user.
  *
  * @author Andrew
  * @version 2019

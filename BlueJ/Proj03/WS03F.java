@@ -1,33 +1,36 @@
-
 /**
- * Write a description of class WS03F here.
+ * Paint a bunch of random shapes and text onto the graphic interface
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Andrew J
+ * @version 2019
  */
-public class WS03F
-{
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class WS03F
-     */
-    public WS03F()
+import java.awt.*;
+import javax.swing.*;
+
+class Gui extends JPanel {
+    public void paintComponent(Graphics g)
     {
-        // initialise instance variables
-        x = 0;
+        super.paintComponent(g);
+        
+        g.setColor(Color.GREEN);
+        
+        
     }
+}
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class WS03F
+{   
+    public static void main (String[] args) {
+        JFrame window = new JFrame("Hello World");
+        
+        window.setBounds(100, 100, 500, 500);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        Gui panel = new Gui();
+        Container c = window.getContentPane();
+        c.add(panel);
+        
+        window.setVisible(true);
     }
 }
