@@ -9,10 +9,10 @@ import java.util.Random;
 
 public class WS03E
 {
-    final static short SPADE = 0;
-    final static short HEART = 1;
-    final static short DIAMOND = 2;
-    final static short CLUB = 3;
+    final static short SPADE = 1;
+    final static short HEART = 2;
+    final static short DIAMOND = 3;
+    final static short CLUB = 4;
     final static short ACE_VAL = 1;
     final static short JACK_VAL = 11;
     final static short QUEEN_VAL = 12;
