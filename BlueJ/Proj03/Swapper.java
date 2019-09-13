@@ -7,16 +7,16 @@
 public class Swapper
 {
     public static void main (String[] args) {
-        StringBuffer str = new StringBuffer("Cal High");
+        StringBuffer str = new StringBuffer("California");
         
         System.out.println("Original: " + str);
         
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'a') {
-                str.setCharAt(i, 'i');
+            if (str.charAt(i) == 'i') {
+                str.setCharAt(i, 'a');
             }
             else if (str.charAt(i) == 'a') {
-                str.setCharAt(i, 'a');
+                str.setCharAt(i, 'i');
             }
         }
         
