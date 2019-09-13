@@ -21,7 +21,7 @@ public class ShapeComponent extends JComponent
       
       // Show the boundary for the image
       g2.setColor(Color.LIGHT_GRAY);
-      g2.draw(new Rectangle(0, 0, 380, 380));
+      g2.draw(new Rectangle(0, 0, 480, 570));
       
       
       // Prepare some colors from scratch (max=255): RGB, or RGB & alpha value
@@ -29,16 +29,16 @@ public class ShapeComponent extends JComponent
       Color colorBlankOut = new Color(255, 255, 255, 150); // to blank out
       
       // Construct a few shapes
-      Rectangle box1 = new Rectangle(5, 10, 200, 300);
-      Ellipse2D.Double oval1 = new Ellipse2D.Double(150, 250, 100, 50);
+      Rectangle box1 = new Rectangle(9, 11, 157, 371);
+      Ellipse2D.Double oval1 = new Ellipse2D.Double(240, 360, 70, 30);
       
       // Construct a line
-      Line2D.Double aLine = new Line2D.Double(50, 100, 95, 75);
+      Line2D.Double aLine = new Line2D.Double(30, 120, 55, 95);
 
       // Construct a polygon
-      int[] xCoords = {120, 140, 130};
-      int[] yCoords = {150, 190, 220};
-      Polygon aPoly = new Polygon(xCoords, yCoords, 3);
+      int[] xCoords = {177, 40, 230};
+      int[] yCoords = {1261, 111, 70};
+      Polygon aPoly = new Polygon(xCoords, yCoords, 5);
       
       // Draw rectangle
       g2.setColor(Color.red);

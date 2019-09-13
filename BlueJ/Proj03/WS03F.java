@@ -1,36 +1,27 @@
 /**
- * Paint a bunch of random shapes and text onto the graphic interface
- *
- * @author Andrew J
- * @version 2019
- */
+* View the shapes on shape component
+*
+* @author Andrew J
+* @version 2019
+*/
 
+//USE TRANSLATE for RECT
 import java.awt.*;
+import java.awt.geom.*;
 import javax.swing.*;
-
-class Gui extends JPanel {
-    public void paintComponent(Graphics g)
-    {
-        super.paintComponent(g);
-        
-        g.setColor(Color.GREEN);
-        
-        
-    }
-}
 
 public class WS03F
 {   
     public static void main (String[] args) {
-        JFrame window = new JFrame("Hello World");
+        JFrame frame = new JFrame();
         
-        window.setBounds(100, 100, 500, 500);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 600);
+        frame.setTitle("Shapes");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        Gui panel = new Gui();
-        Container c = window.getContentPane();
-        c.add(panel);
+        WS03FShapeComponent component = new WS03FShapeComponent();
+        frame.add(component);
         
-        window.setVisible(true);
+        frame.setVisible(true);
     }
 }
