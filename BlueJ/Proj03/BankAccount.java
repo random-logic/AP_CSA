@@ -11,10 +11,16 @@ public class BankAccount
     
     public BankAccount () {}
     
+    /**
+     * @param init_amount the initial balance of a new bank account
+     */
     public BankAccount (double init_amount) {
         balance = init_amount;
     }
     
+    /**
+     * @return the current balance of the bank account
+     */
     public double getBalance() {
         return balance;
     }
