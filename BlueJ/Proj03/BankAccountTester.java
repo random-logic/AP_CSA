@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class BankAccountTester here.
+ * Test the BankAccount class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Andrew
+ * @version 2019
  */
 
 public class BankAccountTester
