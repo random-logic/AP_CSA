@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class CircleTester here.
  *
@@ -7,27 +6,14 @@
  */
 public class CircleTester
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class CircleTester
-     */
-    public CircleTester()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main (String[] args) {
+        Circle circle1 = new Circle(1);
+        Circle circle2 = new Circle(2);
+        
+        System.out.println("Expected area circle 1 (Approximately): 12.5663706");
+        System.out.println("Observed area circle 1: " + circle1.getArea());
+        System.out.println("Expected area circle 2 (Approximately): 12.5663706");
+        System.out.println("Observed area circle 2: " + circle2.getArea());
+        
     }
 }
