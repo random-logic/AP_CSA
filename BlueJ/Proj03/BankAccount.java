@@ -9,9 +9,15 @@ public class BankAccount
 {
     private double balance;
     
-    public BankAccount () {}
+    /**
+     * Constructs a new bank account with an initial value of 0
+     */
+    public BankAccount () {
+        balance = 0;
+    }
     
     /**
+     * Constructs a new bank account with an initial balance of a given value
      * @param init_amount the initial balance of a new bank account
      */
     public BankAccount (double init_amount) {
