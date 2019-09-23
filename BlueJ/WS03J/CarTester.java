@@ -61,14 +61,17 @@ public class CarTester
         System.out.println("Observed: " + car2.getHp());
         
         Random rand = new Random();
-        int rand_speed_up = rand.nextInt(5) + 1;
-        car2.speedUp(rand_speed_up);
-        System.out.println("Expected: 100 + " + rand_speed_up);
-        System.out.println("Observed: " + car2.getSpeed());
+        int rand_speed_up;
+        int rand_speed_down;
         
-        int rand_speed_down = rand.nextInt(5) + 1;
-        car2.speedDown(rand_speed_down);
-        System.out.println("Expected: 100 + " + rand_speed_up + " - " + rand_speed_down);
-        System.out.println("Observed: " + car2.getSpeed());
+        for (int i = 0; i < 10; i++) {
+            rand_speed_up = rand.nextInt(5) + 1;
+            car2.speedUp(rand_speed_up);
+            System.out.println("Observed: " + car2.getSpeed());
+            
+            rand_speed_down = rand.nextInt(5) + 1;
+            car2.speedDown(rand_speed_down);
+            System.out.println("Observed: " + car2.getSpeed());
+        }
     }
 }
