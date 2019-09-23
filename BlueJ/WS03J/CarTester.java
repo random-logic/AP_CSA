@@ -6,6 +6,7 @@
  */
 
 import java.awt.Color;
+import java.util.Random;
 
 public class CarTester
 {
@@ -59,11 +60,15 @@ public class CarTester
         System.out.println("Expected: 200");
         System.out.println("Observed: " + car2.getHp());
         
-        car2.speedUp(20);
-        System.out.println("Expected: 120");
+        Random rand = new Random();
+        int rand_speed_up = rand.nextInt(5) + 1;
+        car2.speedUp(rand_speed_up);
+        System.out.println("Expected: 100 + " + rand_speed_up);
         System.out.println("Observed: " + car2.getSpeed());
-        car2.speedDown(10);
-        System.out.println("Expected: 110");
+        
+        int rand_speed_down = rand.nextInt(5) + 1;
+        car2.speedDown(rand_speed_down);
+        System.out.println("Expected: 100 + " + rand_speed_up + " - " + rand_speed_down);
         System.out.println("Observed: " + car2.getSpeed());
     }
 }
