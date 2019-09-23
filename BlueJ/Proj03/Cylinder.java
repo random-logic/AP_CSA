@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Cylinder here.
+ * Create a class that models a cylinder in the real world
  *
  * @author Andrew
  * @version 2019
@@ -10,6 +10,7 @@ import java.lang.Math;
 
 public class Cylinder
 {
+    Circle circle;
     double radius;
     double height;
     
@@ -20,6 +21,7 @@ public class Cylinder
      */
     Cylinder(double r, double h) {
         radius = r;
+        circle = new Circle(r);
         height = h;
     }
     
@@ -28,7 +30,7 @@ public class Cylinder
      * @return The volume of the cylinder
      */
     public double getVolume() {
-        return Math.PI * radius * radius * height;
+        return circle.getArea() * height;
     }
     
     /**
@@ -36,6 +38,6 @@ public class Cylinder
      * @return The surface area of the cylinder
      */
     public double getSurfArea() {
-        return 2 * Math.PI * radius * radius /*2 * area of the base*/ + 2 * radius * Math.PI * height /*cricumference of the base * height*/;
+        return 2 * circle.getArea() /*2 * area of the base*/ + circle.getCircum() * height /*cricumference of the base * height*/;
     }
 }
