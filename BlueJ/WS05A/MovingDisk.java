@@ -1,12 +1,12 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 /**
  * Purpose: Create a class that models a real moving disk
  * @author Andrew
  * @version 2019
  */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
 public class MovingDisk extends JPanel
   implements ActionListener
 {
@@ -26,8 +26,10 @@ public class MovingDisk extends JPanel
     int r = 20;
 
     Color sky;
-    if (y > 130) sky = Color.BLACK;
-    else sky = Color.CYAN;
+    if (y > 130) 
+        sky = Color.BLACK;
+    else 
+        sky = Color.CYAN;
     setBackground(sky);
     super.paintComponent(g);
 
@@ -46,9 +48,11 @@ public class MovingDisk extends JPanel
     JFrame w = new JFrame("Moving Disk");
     w.setSize(300, 150);
     w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
     Container c = w.getContentPane();
     MovingDisk x = new MovingDisk();
     c.add(x);
+    
     w.setResizable(false);
     w.setVisible(true);
   }
