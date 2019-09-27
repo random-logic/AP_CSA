@@ -16,12 +16,12 @@ public class Morning extends JFrame
     rooster.play();
 
     Container c = getContentPane();
-    c.seBackground(Color.WHITE);
+    c.setBackground(Color.WHITE);
   }
 
   public static void main(String[] args)
   {
-    Morning morning = new Morning;
+    Morning morning = new Morning();
     morning.setSize(300, 150);
     morning.setDefaultCloseOperation(EXIT_ON_CLOSE);
     morning.setVisible(true);
