@@ -12,7 +12,7 @@ public class Morning extends JFrame
   public Morning()
   {
     super("Morning");
-    rooster = new EasySound("roost.wav");
+    rooster = new EasySound("roost.wav);
     rooster.play();
 
     Container c = getContentPane();

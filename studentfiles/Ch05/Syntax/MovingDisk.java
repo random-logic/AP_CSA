@@ -2,17 +2,12 @@ import java.awt.*;
 import java.awt.event*;
 import javax.swing.*;
 
-/**
- * Purpose: Create a class that models a real moving disk
- * @author Andrew
- * @version 2019
- */
 public class MovingDisk extands JPanel
   implements ActionListener
 {
   private int time;
 
-  public void MovingDisk()
+  public MovingDisk()
   {
     time = 0
     Timer clock = new Timer(30, this); 
