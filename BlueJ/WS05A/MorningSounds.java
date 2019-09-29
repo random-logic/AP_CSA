@@ -1,30 +1,45 @@
+/**
+ * Purpose: Make a rooster sound every 5 seconds
+ * @author Andrew
+ * @version 2019
+ */
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.util.Timer;
 
-public class MorningSounds extends JFrame
+public class MorningSounds extends JFrame implements ActionListener
 {
   private EasySound rooster;
+  private int time;
 
   /**
    *   Constructor
    */
   public MorningSounds()
   {
-    super("Morning");
+    super("MorningSounds");
+    
+    time = 0;
+    Timer clock = new Timer(5000, this); 
+    clock.start();
+    
     rooster = new EasySound("roost.wav");
     rooster.play();
     
-    Timer t = new Timer();
-
     Container c = getContentPane();
     c.setBackground(Color.WHITE);
+  }
+  
+  public void actionPerformed(ActionEvent e)
+  {
+    time++;
+    rooster.play();
   }
 
   public static void main(String[] args)
   {
-    Morning morning = new Morning();
+    MorningSounds morning = new MorningSounds();
     morning.setSize(300, 150);
     morning.setDefaultCloseOperation(EXIT_ON_CLOSE);
     morning.setVisible(true);
