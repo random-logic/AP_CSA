@@ -1,4 +1,8 @@
-// Chapter 6 Question 16
+/**
+ * Purpose: To calculate BMI
+ * @author Andrew
+ * @version 2019
+ */
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,6 +14,9 @@ public class Bmi extends JFrame
 {
   JTextField inputLbs, inputInches, displayBmi;
 
+  /**
+   * Purpose: Construct Bmi Class
+   */
   public Bmi()
   {
     super("BMI Calculator");
@@ -37,6 +44,10 @@ public class Bmi extends JFrame
     c.add(go, BorderLayout.SOUTH);
   }
 
+  /**
+   * Purpose: Perform an action for an abstract class
+   * @param e The ActionEvent object
+   */
   public void actionPerformed(ActionEvent e)
   {
     int lbs = Integer.parseInt(inputLbs.getText());
@@ -46,8 +57,12 @@ public class Bmi extends JFrame
     displayBmi.setText(df.format(bmi));
   }
 
-  // Returns BMI equal to weight in kilograms divided
-  // over squared height in meters.
+  /**
+   * Purpose: Calculate the bmi
+   * @param lbs The weight of the person in lbs
+   * @param inches The height of the person in inches
+   * @return The BMI of the person
+   */
   private double calculateBmi(int lbs, int inches)
   {
     final double in_convert_to_m = 0.0254;
@@ -59,6 +74,10 @@ public class Bmi extends JFrame
     return kg / m / m;
   }
 
+  /**
+   * Purpose: Initialize the program and the window and also test class
+   * @param args The arguments (strings) to be passed in the main method
+   */
   public static void main(String[] args)
   {
     Bmi w = new Bmi();
