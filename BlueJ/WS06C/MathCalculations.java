@@ -45,7 +45,7 @@ public class MathCalculations
      * @return The approximation of Euler's number
      */
     public static double approxE(int n) {
-        return Math.pow(1 + 1 / n, (double)n);
+        return Math.pow(1 + 1 / (double)n, (double)n);
     }
 
     /**
@@ -70,11 +70,11 @@ public class MathCalculations
         secs %= 60;
         m = (m - secs) / 60;
         String m_str;
-        if (h < 10) {
+        if (m < 10) {
             m_str = "0" + m;
         }
         else {
-            m_str = "" + h;
+            m_str = "" + m;
         }
 
         String s_str;
