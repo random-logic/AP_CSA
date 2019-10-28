@@ -15,6 +15,9 @@ public class Rps extends JFrame
   private JRadioButton rock, paper, scissors;
   private JTextField display;
 
+  /**
+   * Purpose: Construct the class
+   */
   public Rps()
   {
     super("Rock, paper, Scissors");
@@ -54,29 +57,39 @@ public class Rps extends JFrame
   {
     switch (computerMove) {
       case 'R':
-        if (playerMove == 'R')
-          return 0;
-        else if (playerMove == 'P')
-          return -1;
-        else
-          return 1;
+        switch (playerMove) {
+          case 'R':
+            return 0;
+          case 'P':
+            return -1;
+          default:
+            return 1;
+        }
       case 'P':
-        if (playerMove == 'R')
+      switch (playerMove) {
+        case 'R':
           return 1;
-        else if (playerMove == 'P')
+        case 'P':
           return 0;
-        else
+        default:
           return -1;
+      }
       default:
-        if (playerMove == 'R')
+      switch (playerMove) {
+        case 'R':
           return -1;
-        else if (playerMove == 'P')
+        case 'P':
           return 1;
-        else 
+        default:
           return 0;
+      }
     }
   }
 
+  /**
+   * Purpose: Implement a method from an abstract class
+   * @param e The action event
+   */
   public void actionPerformed(ActionEvent e)
   {
     char playerMove, computerMove;
@@ -102,6 +115,11 @@ public class Rps extends JFrame
     display.setText(msg);
   }
 
+  /**
+   * Purpose: Create a word based on the char move
+   * @param move The result of a round of R, P, S
+   * @return ROCK if R, PAPER if P, SCISSORS if S 
+   */
   private String makeWord(char move)
   {
     String word = "";
@@ -115,7 +133,10 @@ public class Rps extends JFrame
     return word;
   }
 
-  public static void main(String[] args)
+  /**
+   * Purpose: Test and run the RPS class
+   */
+  public static void main()
   {
     Rps window = new Rps();
     window.setBounds(300, 300, 300, 140);
