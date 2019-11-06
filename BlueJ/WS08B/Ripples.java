@@ -26,7 +26,9 @@ public class Ripples {
       keyboard.nextLine(); //Skip the rest of the next line
 
       //Tell price if bought in sets of 25, otherwise prompt error
-      if (quantity % 25 == 0)
+      if (quantity < 0)
+        System.out.println("Ripples cannot be ordered in negative quantity.\n");
+      else if (quantity % 25 == 0)
         System.out.printf("You have ordered %d Ripples -- $%.2f\n\n", quantity, PRICE * quantity);
       else
         System.out.println("Ripples can only be ordered in packs of 25.\n");
