@@ -56,11 +56,17 @@ public class UsingLoops {
     return count1;
   }
 
+  /**
+   * Purpose: Calculate the number of months when a student achieves certain percentage of the
+   * knowledge from studying certain material. 
+   * @param rate rate (of type double) of knowledge gained after one month
+   * @param target desired % of knowledge of material (of type double)
+   * @return number of months (of type double) to obtain the desired % of knowledge of material 
+   */
   public static double knowledgeGrowth (double rate, double target) {
     double months = 0;
-    double knowledge = 0;
     
-    for (; knowledge < target; knowledge += (1 - knowledge) * rate)
+    for (double knowledge = 0; knowledge < target; knowledge += (1 - knowledge) * rate)
       months++;
     
       return months;
@@ -75,10 +81,10 @@ public class UsingLoops {
     double pi_over_4 = 1;
 
     for (int i = 2, bottom = 3; i <= n; i += 2, bottom += 4)
-      pi_over_4 -= 1 / bottom;
+      pi_over_4 -= 1.0 / bottom;
 
     for (int i = 3, bottom = 5; i <= n; i += 2, bottom += 4)
-      pi_over_4 += 1 / bottom;
+      pi_over_4 += 1.0 / bottom;
 
     return 4 * pi_over_4;
   }
@@ -131,16 +137,20 @@ public class UsingLoops {
    * Purpose: Test the class methods
    */
   public static void main () {
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
-    System.out.println("");
+    System.out.println("popGrowth year = 2000, init_pop = 5000, future_pop = 10000, rate = 0.2");
+    System.out.println("Expected: 2004");
+    System.out.println("Observed: " + popGrowth(2000, 5000, 10000, 0.2));
+    System.out.println();
+    System.out.println("calcChairs rowNum1 = 10, count1 = 20, k = 4, rowNum2 = 8");
+    System.out.println("Expected: 12");
+    System.out.println("Observed: " + calcChairs(10, 20, 4, 8));
+    System.out.println("calcChairs rowNum1 = 8, count1 = 20, k = 4, rowNum2 = 10");
+    System.out.println("Expected: 28");
+    System.out.println("Observed: " + calcChairs(8, 20, 4, 10));
+    System.out.println();
+    System.out.println("knowledgeGrowth rate = 0.4, target = 0.85");
+    System.out.println("Expected: 4");
+    System.out.println("Observed: " + knowledgeGrowth(0.4, 0.85));
     System.out.println();
     System.out.println("estPi n = 5");
     System.out.println("Expected: 3.33968254");
@@ -148,10 +158,10 @@ public class UsingLoops {
     System.out.println();
     System.out.println("starTriangle n = 4");
     System.out.println("Expected:");
-    System.out.println("   *");
-    System.out.println("  ***");
-    System.out.println(" *****");
-    System.out.println("*******");
+    System.out.println("   X");
+    System.out.println("  XXX");
+    System.out.println(" XXXXX");
+    System.out.println("XXXXXXX");
     System.out.println("Observed:");
     starTriangle(4);
     System.out.println();
