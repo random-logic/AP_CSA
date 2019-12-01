@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=GreetingCard
-dependency1.to=BalloonComponent
+dependency1.from=BalloonComponent
+dependency1.to=Balloon
 dependency1.type=UsesDependency
-dependency2.from=BalloonComponent
-dependency2.to=Balloon
+dependency2.from=GreetingCard
+dependency2.to=BalloonComponent
 dependency2.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
