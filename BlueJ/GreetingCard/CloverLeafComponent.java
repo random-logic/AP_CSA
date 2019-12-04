@@ -1,5 +1,5 @@
 /**
- * Purpose: This class displays a number of balloons.
+ * Purpose: This class displays a number of clover leaves.
  * @author Andrew
  * @version 2019
  */
@@ -11,9 +11,9 @@ import javafx.stage.Window;
 import java.awt.*;
 import java.util.*;
 
- public class BalloonComponent extends JComponent
+ public class CloverLeafComponent extends JComponent
 {
-   private int balloonCount;
+   private int clover_leaves_count;
    private static final int RANDOM_COLORS_SIZE = 4;
    private static final Color[] RANDOM_COLORS = {new Color(153, 98, 54), new Color(237, 115, 46), new Color(157, 34, 30), new Color(133, 157, 60)};
    private static final Color SKY_ORANGE_YELLOW = new Color(248, 177, 44);
@@ -22,12 +22,12 @@ import java.util.*;
    private static final Color GREETING_MSG_COLOR = new Color(0, 0, 0);
    
    /**
-    * Constructor for a BalloonComponent with a number of balloons
-    * @param n the number of balloons to show
+    * Constructor for a clover leavesComponent with a number of clover leaves
+    * @param n the number of clover leaves to show
     */
-   public BalloonComponent(int n)
+   public CloverLeafComponent(int n)
    {
-      balloonCount = n;
+      clover_leaves_count = n;
    }
       
    /**
@@ -44,11 +44,11 @@ import java.util.*;
       // Use this random number generator
       Random generator = new Random(42);
 
-      // Generate and draw balloons
+      // Generate and draw clover leaves
       // Your work here
-      for (int i = 0; i < balloonCount; i++) {
-         Balloon balloon = new Balloon(generator.nextInt(getWidth()), generator.nextInt(getHeight()), generator.nextInt(50), randomColor());
-         balloon.draw(g2);
+      for (int i = 0; i < clover_leaves_count; i++) {
+         CloverLeaf clover_leaf = new CloverLeaf(generator.nextInt(getWidth()), generator.nextInt(getHeight()), generator.nextInt(50), randomColor());
+         clover_leaf.draw(g2);
       }
 
       Font font = new Font("TimesRoman", Font.PLAIN, GREETING_FONT_SIZE);
@@ -60,7 +60,7 @@ import java.util.*;
    }
 
    /**
-    * Purpose: Generate a random color for the balloons
+    * Purpose: Generate a random color for the clover leaves
     * @return A random color
     */
    private static Color randomColor() {

@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GreetingCard {
-  private static final int NBALLOONS = 40;
+  private static final int NCLOVERLEAVES = 40;
   
   /**
    * Purpose: Start and run the program from here
@@ -25,11 +25,11 @@ public class GreetingCard {
     label.setSize(100, 100);
     frame.add(label);
     
-    frame.setSize(400, 600);
-    frame.setTitle("BalloonViewer");
+    frame.setSize(480, 600);
+    frame.setTitle("Thanksgiving Card");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
-    BalloonComponent component = new BalloonComponent(NBALLOONS);
+    CloverLeafComponent component = new CloverLeafComponent(NCLOVERLEAVES);
     frame.add(component);
     
     frame.setResizable(false);
