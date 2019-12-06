@@ -38,28 +38,48 @@ public class LipogramAnalyzer {
    */
   public String allWordsWith(char letter) {
     String str = "";
-    String word = "";
-    boolean word_offends = false;
 
     for (int i = 0; i < text.length(); i++) {
-      char ch = text.charAt(i);
-      if (ch == ' ') {
-        if (word_offends) {
-          str += "" + word + "\n";
-          word_offends = false;
-        }
-        word = "";
-      }
-      else {
-        word += "" + ch;
-        if (ch == letter)
-          word_offends = true;
+      if (text.charAt(i) == letter) {
+        str += "" + extractWord(text, i) + "\n";
       }
     }
 
-    if (word_offends)
-      str += "" + word;
+    String[] array = str.split("\n");
+
+    for (int i = 0; i < array.length; i++) {
+      for (int j = i + 1; j < array.length; j++) {
+        if (array[i].equals(array[j]))
+          array[j] = "";
+      }
+    }
+
+    str = "";
+    for (int i = 0; i < array.length; i++) {
+      if (!array[i].equals(""))
+        str += "" + array[i] + "\n";
+    }
     
-    return str;
+    return str.trim();
+  }
+
+  /**
+   * Purpose: Extract a word from a given text at a given position
+   * @param text The text to extract the word from
+   * @param index The position to extract the word from
+   * @return The extracted word
+   */
+  private String extractWord(String text, int index) {
+    int lower = index, upper = index + 1;
+
+    while (lower >= 0 && text.charAt(lower) != ' ')
+      lower--;
+    
+    lower++;
+    
+    while (upper < text.length() && text.charAt(upper) != ' ')
+      upper++;
+    
+    return text.substring(lower, upper);
   }
 }
