@@ -11,24 +11,15 @@ import javafx.stage.Window;
 import java.awt.*;
 import java.util.*;
 
- public class CloverLeafComponent extends JComponent
+ public class SceneComponent extends JComponent
 {
-   private int clover_leaves_count;
+   private static final int CLOVER_LEAVES_COUNT = 30;
    private static final int RANDOM_COLORS_SIZE = 4;
    private static final Color[] RANDOM_COLORS = {new Color(153, 98, 54), new Color(237, 115, 46), new Color(157, 34, 30), new Color(133, 157, 60)};
    private static final Color SKY_ORANGE_YELLOW = new Color(248, 177, 44);
    private static final String GREETING_MSG = "Happy Thanksgiving!";
    private static final int GREETING_FONT_SIZE = 32;
    private static final Color GREETING_MSG_COLOR = new Color(0, 0, 0);
-   
-   /**
-    * Constructor for a clover leavesComponent with a number of clover leaves
-    * @param n the number of clover leaves to show
-    */
-   public CloverLeafComponent(int n)
-   {
-      clover_leaves_count = n;
-   }
       
    /**
     * Purpose: Paint the whole greeting card
@@ -46,8 +37,8 @@ import java.util.*;
 
       // Generate and draw clover leaves
       // Your work here
-      for (int i = 0; i < clover_leaves_count; i++) {
-         CloverLeaf clover_leaf = new CloverLeaf(generator.nextInt(getWidth()), generator.nextInt(getHeight()), generator.nextInt(50), randomColor());
+      for (int i = 0; i < CLOVER_LEAVES_COUNT; i++) {
+         CloverLeaf clover_leaf = new CloverLeaf(generator.nextInt(getWidth()), generator.nextInt(getHeight()), generator.nextInt(40) + 10, randomColor());
          clover_leaf.draw(g2);
       }
 
