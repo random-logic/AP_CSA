@@ -72,12 +72,12 @@ public class LipogramAnalyzer {
   private String extractWord(String text, int index) {
     int lower = index, upper = index + 1;
 
-    while (lower >= 0 && text.charAt(lower) != ' ')
+    while (lower >= 0 && (Character.isDigit(text.charAt(lower)) || Character.isLetter(text.charAt(lower))))
       lower--;
     
     lower++;
     
-    while (upper < text.length() && text.charAt(upper) != ' ')
+    while (upper < text.length() && (Character.isDigit(text.charAt(upper)) || Character.isLetter(text.charAt(upper))))
       upper++;
     
     return text.substring(lower, upper);
