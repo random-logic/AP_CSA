@@ -1,5 +1,5 @@
 /**
- * Create an empty list.
+ * Test the lists.
  *
  * @author Andrew
  * @version 2020
@@ -29,9 +29,12 @@ public class ALTester
         System.out.println(cityList); //C
         System.out.println(cityList.toString());
         
-        cityList.get(-1); //D
+        cityList.get(-1); //D1
         cityList.get(cityList.size());
         cityList.get(cityList.size() + 1);
+        
+        System.out.println(cityList.indexOf("San Ramon")); //D2
+        System.out.println(cityList.indexOf("Livermore"));
         
         cityList.set(0, "Pleasanton"); //E1
         System.out.println(cityList);
