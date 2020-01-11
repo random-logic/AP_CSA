@@ -1,5 +1,5 @@
 /**
- * 
+ * Store all of the indexes for a word
  * @author Andrew
  * @version 2020
  */

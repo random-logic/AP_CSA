@@ -3,6 +3,8 @@
  * for all the words in the file and writes the index
  * into the output file.  The program takes input and output file names
  * from the command-line args or prompts the user for the file names.
+ * @author Andrew
+ * @version 2020
  */
 
 import java.util.Scanner;
@@ -10,6 +12,10 @@ import java.io.*;
 
 public class IndexMaker
 {
+  /**
+   * Main method of the program, this is where the program starts
+   * @param args Optional, the file names for input and output
+   */
   public static void main(String[] args) throws IOException
   {
     Scanner keyboard = new Scanner(System.in);
