@@ -59,6 +59,7 @@ public class DocumentIndex extends ArrayList<IndexEntry> {
    */
   private int foundOrInserted (String word) {
     int index = 0;
+    word = word.toUpperCase();
     while (index < this.size()) {
       if (this.get(index).getWord().compareToIgnoreCase(word) < 0)
         index++;
