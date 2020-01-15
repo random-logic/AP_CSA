@@ -25,7 +25,7 @@ public class Person {
    * Purpose: Get the name of the person
    * @return The name of the person
    */
-  public String getName() {
+  public String getOwnName() {
     return name;
   }
 
@@ -33,7 +33,7 @@ public class Person {
    * Purpose: Get the age of the person
    * @return The age of the person
    */
-  public int getAge() {
+  public int getOwnAge() {
     return age;
   }
 
@@ -41,8 +41,16 @@ public class Person {
    * Purpose: Set the age of the person
    * @param age The new age of the person
    */
-  public void setAge(int age) {
+  public void setOwnAge(int age) {
     this.age = age;
+  }
+
+  /**
+   * Purpose: Get the number of friends
+   * @return The number of friends
+   */
+  public int getFriendCount () {
+    return friends.size();
   }
 
   /**
@@ -72,7 +80,7 @@ public class Person {
       if (friends.get(index).compareToIgnoreCase(add.name) >= 0) {
         if (!friends.get(index).equalsIgnoreCase(add.name))
           friends.add(index, add.name);
-        break;
+        return;
       }
       index++;
     }
@@ -110,31 +118,41 @@ public class Person {
   }
 
   /**
+   * Purpose: Get the average length of all the friends names
+   * @return The average length of all the friends names
+   */
+  public double calcAvgNameLength () {
+    int sumOfLengths = 0;
+    for (String friend : friends) {
+        sumOfLengths += friend.length();
+    }
+    return ((double) sumOfLengths) / friends.size();
+  }
+
+  /**
+   * Purpose: Get all friends names
+   * @return All the friends names
+   */
+  public String getAllFriendsNames () {
+    return friends.toString().substring(1, friends.toString().length() - 1);
+  }
+
+  /**
+   * Purpose: Get one friends name
+   * @param index The index of the friends name
+   * @return The friends name at the specified index
+   */
+  public String get1FriendsName (int index) {
+    if (index < 0 || index >= friends.size())
+        return "";
+    return friends.get(index);
+  }
+
+  /**
    * Purpose: Convert the person object to a string
    * @return The string representing the person object
    */
   public String toString() {
     return name + "(Age " + age + "): " + friends.toString().substring(1, friends.toString().length() - 1);
-  }
-
-  /**
-   * Purpose: Test the class
-   */
-  public static void main() {
-    Person person = new Person ("James", 16);
-
-    person.addFriend("Sam");
-    person.addFriend("SAM");
-    
-    System.out.println(person);
-
-    person.addFriend("YEET");
-
-    System.out.println(person);
-
-    person.unfriend("sAm");
-    person.setAge(33);
-
-    System.out.println(person);
   }
 }
