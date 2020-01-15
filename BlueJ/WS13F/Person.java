@@ -8,14 +8,16 @@ import java.util.ArrayList;
 
 public class Person {
   private String name;
+  private int age;
   private ArrayList<String> friends;
 
   /**
    * Purpose: Constructor
    * @param name The name of the person
    */
-  public Person(String name) {
+  public Person(String name, int age) {
     this.name = name;
+    this.age = age;
     this.friends = new ArrayList<String>();
   }
 
@@ -25,6 +27,22 @@ public class Person {
    */
   public String getName() {
     return name;
+  }
+
+  /**
+   * Purpose: Get the age of the person
+   * @return The age of the person
+   */
+  public int getAge() {
+    return age;
+  }
+
+  /**
+   * Purpose: Set the age of the person
+   * @param age The new age of the person
+   */
+  public void setAge(int age) {
+    this.age = age;
   }
 
   /**
@@ -96,14 +114,14 @@ public class Person {
    * @return The string representing the person object
    */
   public String toString() {
-    return name + ": " + friends.toString().substring(1, friends.toString().length() - 1);
+    return name + "(Age " + age + "): " + friends.toString().substring(1, friends.toString().length() - 1);
   }
 
   /**
    * Purpose: Test the class
    */
   public static void main() {
-    Person person = new Person ("James");
+    Person person = new Person ("James", 16);
 
     person.addFriend("Sam");
     person.addFriend("SAM");
@@ -115,6 +133,7 @@ public class Person {
     System.out.println(person);
 
     person.unfriend("sAm");
+    person.setAge(33);
 
     System.out.println(person);
   }
