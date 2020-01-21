@@ -49,6 +49,8 @@ public class Student extends Person {
     for (int i = 0; i < earnedPts.size(); i++) {
       str += " " + earnedPts.get(i) + "/" + maxPts.get(i);
     }
+    if (str.equals(" Scores:"))
+        str += " N/A";
     return super.toString() + str;
   }
 }
