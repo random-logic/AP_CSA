@@ -98,5 +98,38 @@ public class IntArrayWorker
       }
     }
   }
- 
+  
+  /**
+   * Return the count of the number of times a passed integer value is found in the matrix
+   * @param num The number to look for
+   * @return The count
+   */
+  public int getCount (int num) {
+      int count = 0;
+      if (matrix != null)
+          for (int i = 0; i < matrix.length; i++)
+            for (int j = 0; j < matrix[i].length; j++)
+                if (num == matrix[i][j]) 
+                    count++;
+      return count;
+  }
+  
+  public int getLargest () {
+      if (matrix == null)
+        return 0;
+      int max = matrix[0][0];
+      for (int i = 0; i < matrix.length; i++)
+        for (int j = 0; j < matrix[i].length; j++)
+            if (max < matrix[i][j])
+                max = matrix[i][j];
+      return max;
+  }
+  
+  public int getColTotal (int col) {
+      int sum = 0;
+      if (matrix != null)
+        for (int i = 0; i < matrix.length; i++)
+          sum += matrix[i][col];
+      return sum;
+  }
 }

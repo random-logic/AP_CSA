@@ -118,6 +118,46 @@ public class Picture extends SimplePicture
     } 
   }
   
+  /** Method that mirrors the picture around a 
+    * vertical mirror in the center of the picture
+    * from right to left */
+  public void mirrorVerticalRightToLeft()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; col < width / 2; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    } 
+  }
+  
+  /** Method that mirrors the picture around a 
+    * horizontal mirror in the center of the picture
+    */
+  public void mirrorHorizontal()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel upPixel = null;
+    Pixel downPixel = null;
+    int width = pixels.length;
+    for (int row = 0; row < width / 2; row++)
+    {
+      for (int col = 0; col < pixels[row].length; col++)
+      {
+        upPixel = pixels[row][col];
+        downPixel = pixels[width - 1 - row][col];
+        downPixel.setColor(upPixel.getColor());
+      }
+    } 
+  }
+  
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -217,6 +257,58 @@ public class Picture extends SimplePicture
     }
   }
   
+  /**
+   * Set the color of green and red to zero so there is only blue in the picture
+   */
+  public void keepOnlyBlue () {
+      Pixel[][] pixels = this.getPixels2D();
+      for (Pixel[] rowArray : pixels)
+        for (Pixel pixelObj : rowArray) {
+            pixelObj.setRed(0);
+            pixelObj.setGreen(0);
+        }
+  }
+  
+  /**
+   * Negate the whole picture
+   */
+  public void negate () {
+      Pixel[][] pixels = this.getPixels2D();
+      for (Pixel[] rowArray : pixels)
+        for (Pixel pixelObj : rowArray) {
+            pixelObj.setRed(255 - pixelObj.getRed());
+            pixelObj.setGreen(255 - pixelObj.getGreen());
+            pixelObj.setBlue(255 - pixelObj.getBlue());
+        }
+  }
+  
+  /**
+   * Grayscale the whole picture
+   */
+  public void grayscale () {
+      Pixel[][] pixels = this.getPixels2D();
+      for (Pixel[] rowArray : pixels)
+        for (Pixel pixelObj : rowArray) {
+            int average = pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue();
+            average = (int)(((double) average) / 3 + 0.5);
+            pixelObj.setRed(average);
+            pixelObj.setGreen(average);
+            pixelObj.setBlue(average);
+        }
+  }
+  
+  /**
+   * Make fish easier to see in the picture
+   */
+  public void fixUnderwater () {
+      Pixel[][] pixels = this.getPixels2D();
+      for (Pixel[] rowArray : pixels)
+        for (Pixel pixelObj : rowArray) {
+            pixelObj.setBlue(pixelObj.getBlue() / 3);
+            pixelObj.setGreen(pixelObj.getGreen() / 3);
+            pixelObj.setRed(pixelObj.getRed() * 3);
+        }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
