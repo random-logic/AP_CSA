@@ -44,12 +44,27 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  /** Method to test mirrorHorizontalBotToTop */
+  public static void testMirrorHorizontalBotToTop () {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
+  
   /** Method to test mirrorTemple */
-  public static void testMirrorTemple()
-  {
+  public static void testMirrorTemple() {
     Picture temple = new Picture("temple.jpg");
     temple.explore();
     temple.mirrorTemple();
+    temple.explore();
+  }
+
+  /** Method to test mirrorArms */
+  public static void testMirrorArms() {
+    Picture temple = new Picture("snowman.jpg");
+    temple.explore();
+    temple.mirrorArms();
     temple.explore();
   }
   
@@ -114,7 +129,9 @@ public class PictureTester
     testMirrorVertical();
     testMirrorVerticalRightToLeft();
     testMirrorHorizontal();
-    //testMirrorTemple();
+    testMirrorHorizontalBotToTop();
+    testMirrorTemple();
+    testMirrorArms();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
