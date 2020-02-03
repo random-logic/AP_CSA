@@ -83,6 +83,14 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+    /** Method to test edgeDetection2 */
+    public static void testEdgeDetection2()
+    {
+      Picture snowman = new Picture("snowman.jpg");
+      snowman.edgeDetection2(20);
+      snowman.explore();
+    }
   
   /** Method to test keepOnlyBlue */
   public static void testKeepOnlyBlue () {
@@ -132,13 +140,12 @@ public class PictureTester
     testMirrorHorizontalBotToTop();
     testMirrorTemple();
     testMirrorArms();
-    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
