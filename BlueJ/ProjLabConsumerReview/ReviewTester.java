@@ -10,5 +10,9 @@ public class ReviewTester {
     String word = sentimentVal(0.5);
     double x = sentimentVal(“good”, “bad”);
     */
+
+    System.out.println("2-2");
+    System.out.println("totalSentiment(“SimpleReview.txt”): " + Review.totalSentiment("SimpleReview.txt"));
+    System.out.println("starRating(“SimpleReview.txt”): " + Review.starRating("SimpleReview.txt"));
   }
 }

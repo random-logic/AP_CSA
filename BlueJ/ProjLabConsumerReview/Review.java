@@ -186,4 +186,22 @@ public class Review {
     
     return sum;
   }
+
+  public static int starRating (String fileName) {
+    double sum = totalSentiment(fileName);
+    int rating;
+
+    if (sum > 30)
+      rating = 5;
+    else if (sum > 20)
+      rating = 4;
+    else if (sum > 10)
+      rating = 3;
+    else if (sum > 0)
+      rating = 2;
+    else
+      rating = 1;
+    
+    return rating;
+  }
 }
