@@ -13,9 +13,6 @@ public class Review {
   private HashMap<String, Double> sentiment = new HashMap<String, Double>();
   private ArrayList<String> posAdjectives = new ArrayList<String>();
   private ArrayList<String> negAdjectives = new ArrayList<String>();
- 
-  
-  private final String SPACE = " ";
   
   {
     try {
@@ -55,7 +52,7 @@ public class Review {
       input.close();
     }
     catch(Exception e){
-      System.out.println("Error reading or parsing negativeAdjectives.txt");
+      System.out.println("Error reading or parsing negativeAdjectives.txt\n" + e);
     }   
   }
   
@@ -203,5 +200,33 @@ public class Review {
       rating = 1;
     
     return rating;
+  }
+
+  public static String fakeReview (String fileName) {
+    ArrayList<String> strs = new ArrayList<String>();
+    Review r = new Review();
+
+    try {
+      Scanner input = new Scanner(new File(fileName));
+      while(input.hasNextLine()){
+        String[] temp = input.nextLine().trim().split(" ");
+        temp[temp.length - 1] += "\n";
+        for (String str : temp)
+          strs.add(str);
+      }
+      input.close();
+     }
+    catch(Exception e){
+      System.out.println("Error reading or parsing " + fileName + "\n" + e);
+    }
+
+    String return_str = "";
+    for (String str : strs)
+      if (str.at(0) == '*')
+        return_str += r.randomAdjective() + " ";
+      else
+        return_str += str + " ";
+    
+    return return_str;
   }
 }
