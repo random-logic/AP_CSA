@@ -222,8 +222,64 @@ public class Review {
 
     String return_str = "";
     for (String str : strs)
-      if (str.at(0) == '*')
+      if (str.charAt(0) == '*')
         return_str += r.randomAdjective() + " ";
+      else
+        return_str += str + " ";
+    
+    return return_str;
+  }
+
+  public static String fakePositiveReview (String fileName) {
+    ArrayList<String> strs = new ArrayList<String>();
+    Review r = new Review();
+
+    try {
+      Scanner input = new Scanner(new File(fileName));
+      while(input.hasNextLine()){
+        String[] temp = input.nextLine().trim().split(" ");
+        temp[temp.length - 1] += "\n";
+        for (String str : temp)
+          strs.add(str);
+      }
+      input.close();
+     }
+    catch(Exception e){
+      System.out.println("Error reading or parsing " + fileName + "\n" + e);
+    }
+
+    String return_str = "";
+    for (String str : strs)
+      if (str.charAt(0) == '*' && str.length() > 1 && r.sentimentVal(str.substring(1, str.length())) <= 0)
+        return_str += r.randomPositiveAdj() + " ";
+      else
+        return_str += str + " ";
+    
+    return return_str;
+  }
+
+  public static String fakeNegativeReview (String fileName) {
+    ArrayList<String> strs = new ArrayList<String>();
+    Review r = new Review();
+
+    try {
+      Scanner input = new Scanner(new File(fileName));
+      while(input.hasNextLine()){
+        String[] temp = input.nextLine().trim().split(" ");
+        temp[temp.length - 1] += "\n";
+        for (String str : temp)
+          strs.add(str);
+      }
+      input.close();
+     }
+    catch(Exception e){
+      System.out.println("Error reading or parsing " + fileName + "\n" + e);
+    }
+
+    String return_str = "";
+    for (String str : strs)
+      if (str.charAt(0) == '*' && str.length() > 1 && r.sentimentVal(str.substring(1, str.length())) >= 0)
+        return_str += r.randomNegativeAdj() + " ";
       else
         return_str += str + " ";
     
