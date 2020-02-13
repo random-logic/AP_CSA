@@ -52,5 +52,12 @@ public class DeckTester {
 		System.out.println();
 
 		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
+		d.shuffle();
+		System.out.println("**** After Shuffle Deck Method ****");
+		System.out.println("  toString:\n" + d.toString());
+		System.out.println("  isEmpty: " + d.isEmpty());
+		System.out.println("  size: " + d.size());
+		System.out.println();
+		System.out.println();
 	}
 }

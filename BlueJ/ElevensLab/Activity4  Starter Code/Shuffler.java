@@ -57,12 +57,12 @@ public class Shuffler {
 		int[] half2 = new int[(int)(values.length / 2 + 0.5)];
 		int half1count, half2count;
 		for (half1count = 0; half1count < half1.length; half1count++)
-			half1[i] = values[i];
+			half1[half1count] = values[half1count];
 		for (half2count = 0; half2count < half2.length; half2count++)
 			half2[half2count] = values[half2count + half1.length];
 		half1count = 0;
 		half2count = 0;
-		for (int i = 0; i < values.length; i++);
+		for (int i = 0; i < values.length; i++)
 			if (half1count < half2count)
 				values[i] = half1[half1count++];
 			else
