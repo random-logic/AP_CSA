@@ -1,0 +1,1 @@
+System.out.println(Math.sqrt(a * a + b * b));

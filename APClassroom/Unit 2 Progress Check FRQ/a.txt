@@ -1,0 +1,1 @@
+LightSequence gradShow = new LightSequence("0101 0101 0101");

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Customer {
   public int compareCustomer (Customer other) {
     if (getName().equals(other.getName())) {
@@ -11,26 +13,26 @@ public class Customer {
   public void prefixMerge (ArrayList<Customer> list1, ArrayList<Customer> list2, ArrayList<Customer> result) {
     int i = 0, j = 0;
     while (i < list1.size() && j < list2.size()) {
-      int compare = list1[i].compareCustomer(list2[j]);
+      int compare = list1.get(i).compareCustomer(list2.get(j));
       if (compare < 0) {
-        result.add(list1[i]);
+        result.add(list1.get(i));
         i++;
       }
       else if (compare > 0) {
-        result.add(list2[j]);
+        result.add(list2.get(j));
         j++;
       }
       else {
-        result.add(list1[i]);
+        result.add(list1.get(i));
         i++;
         j++;
       }
     }
 
-    for (i; i < list1.size(); i++)
-      result.add(list1[i]);
+    for (; i < list1.size(); i++)
+      result.add(list1.get(i));
     
-    for (j; j < list1.size(); j++)
-      result.add(list2[j]);
+    for (; j < list1.size(); j++)
+      result.add(list2.get(j));
   }
 }
