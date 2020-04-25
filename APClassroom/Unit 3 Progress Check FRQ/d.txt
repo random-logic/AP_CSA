@@ -1,0 +1,6 @@
+if (option1.equals(option2)) {
+  System.out.println("true");
+}
+else {
+  System.out.println("false");
+}

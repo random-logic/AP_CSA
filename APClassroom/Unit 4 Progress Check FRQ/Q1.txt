@@ -1,0 +1,20 @@
+public static void longestStreak(String str) {
+  char prev = str.charAt(0), highestStreakChar = prev;
+  int highestStreak = 1, currentStreak = 1;
+  for (int i = 1; i < str.length(); i++) {
+    char currentChar = str.charAt(i);
+    if (prev == currentChar) {
+      currentStreak++;
+      if (currentStreak > highestStreak) {
+        highestStreak++;
+        highestStreakChar = prev;
+      }
+    }
+    else {
+      currentStreak = 1;
+    }
+    prev = currentChar;
+  }
+
+  System.out.println(highestStreakChar + " " + highestStreak);
+}

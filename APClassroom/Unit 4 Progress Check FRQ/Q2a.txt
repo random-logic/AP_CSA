@@ -1,0 +1,11 @@
+public int getPlayer2Move(int round) {
+  if (round % 3 == 0) {
+    return 3;
+  }
+  else if (round % 2 == 0) {
+    return 2;
+  }
+  else {
+    return 1;
+  }
+}

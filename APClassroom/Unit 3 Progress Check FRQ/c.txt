@@ -1,0 +1,17 @@
+if (rvsp) {
+  if (selection == 1) {
+    System.out.println("Thanks for attending. You will be served beef.");
+  }
+  else if (selection == 2) {
+    System.out.println("Thanks for attending. You will be served chicken.");
+  }
+  else if (selection == 3) {
+    System.out.println("Thanks for attending. You will be served pasta.");
+  }
+  else {
+    System.out.println("Thanks for attending. You will be served fish.");
+  }
+}
+else {
+  System.out.println("Sorry you can't make it.");
+}

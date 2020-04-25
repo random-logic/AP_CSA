@@ -1,0 +1,6 @@
+if (rsvp) {
+  System.out.println("attending");
+}
+else {
+  System.out.println("not attending");
+}

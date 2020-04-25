@@ -1,0 +1,12 @@
+if (selection == 1) {
+  System.out.println("beef");
+}
+else if (selection == 2) {
+  System.out.println("chicken");
+}
+else if (selection == 3) {
+  System.out.println("pasta");
+}
+else {
+  System.out.println("fish");
+}

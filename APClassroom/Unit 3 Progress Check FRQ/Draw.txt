@@ -1,0 +1,20 @@
+public static void drawSquare(int x, int y, int len) {
+  int maxX = x + len;
+  if (maxX > 10) {
+    int difference = maxX - 10;
+    len -= difference;
+  }
+  int minY = y - len;
+  if (minY < 0) {
+    int difference = -minY;
+    len -= difference;
+  }
+
+  drawLine(x, y, x + len, y);
+  drawLine(x, y, x, y - len);
+  drawLine(x + len, y, x + len, y - len);
+  drawLine(x, y - len, x + len, y - len);
+
+  int area = len * len;
+  System.out.println("side length = " + len + ", area = " + area);
+}

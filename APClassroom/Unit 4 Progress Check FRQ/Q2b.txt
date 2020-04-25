@@ -1,0 +1,27 @@
+public void playGame() {
+  int player1Coins = startingCoins, player2Coins = startingCoins, roundsPlayed = 0;
+  while (roundsPlayed < maxRounds && player1Coins >= 3 && player2Coins >= 3) {
+    int player1Move = getPlayer1Move(roundsPlayed), player2Move = getPlayer2Move(roundsPlayed);
+    player1Coins -= player1Move;
+    player2Coins -= player2Move;
+    int difference = player1Move - player2Move;
+    if (difference < 0) difference *= -1;
+    if (difference == 2) {
+      player1Coins += 2;
+    }
+    else /*if (difference == 1 || difference == 0)*/ {
+      player2Coins++;
+    }
+    roundsPlayed++;
+  }
+
+  if (player1Coins > player2Coins) {
+    System.out.println("player 1 wins");
+  }
+  else if (player2Coins > player1Coins) {
+    System.out.println("player 2 wins");
+  }
+  else {
+    System.out.println("tie game");
+  }
+}
