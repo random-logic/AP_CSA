@@ -1,6 +1,5 @@
 import java.util.*;
 
-//2
 public class PasswordGenerator {
   private static int count = 0;
   private String prefix;
