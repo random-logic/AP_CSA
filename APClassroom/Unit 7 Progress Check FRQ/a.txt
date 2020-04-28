@@ -1,0 +1,6 @@
+public Username (String firstName, String lastName) {
+  possibleNames = new ArrayList<String>();
+  for (int i = 1; i <= firstName.length(); i++) {
+    possibleNames.add(lastName + firstName.substring(0, i));
+  }
+}
